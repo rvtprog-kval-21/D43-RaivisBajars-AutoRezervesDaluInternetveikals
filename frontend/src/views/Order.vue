@@ -179,6 +179,7 @@ export default {
       console.log(this.orderForm)
       Order.addOrder(this.orderForm)
       this.deleteCartItem(this.user.id)
+      this.$router.push('orders')
     },
     deleteCartItem (id) {
       this.axios.delete(`http://localhost:8000/api/cart/deleteall/${id}`)

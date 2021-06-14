@@ -67,7 +67,9 @@ export default {
         this.currentCategory = this.getCategoryByUrl(this.$route.params.url)
         this.category.forEach((element) => {
           if (element.parent_category === this.currentCategory.id) {
-            element.image = 'https://dummyimage.com/600x600/f5f5f5/000000.png&text=Placeholder'
+            if (element.image == null) {
+              element.image = 'https://dummyimage.com/600x600/151a21/fff.png&text=Placeholder'
+            }
             this.sortedCategories.push(element)
           }
         })
@@ -75,7 +77,7 @@ export default {
         this.category.forEach((element) => {
           if (element.parent_category == null) {
             if (element.image == null) {
-              element.image = 'https://dummyimage.com/600x600/f5f5f5/000000.png&text=Placeholder'
+              element.image = 'https://dummyimage.com/600x600/151a21/fff.png&text=Placeholder'
             }
             this.sortedCategories.push(element)
           }

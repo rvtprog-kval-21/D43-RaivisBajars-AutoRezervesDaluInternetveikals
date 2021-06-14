@@ -10,7 +10,7 @@ class OrderController extends Controller
 {
     public function show($user_id)
     {
-        $order = Order::select('order_id', 'user_id', 'status', 'delivery', 'products', 'price')->where('user_id', $user_id)->get();
+        $order = Order::select('order_id', 'user_id', 'status', 'delivery', 'products', 'price')->where('user_id', $user_id)->orderBy('order_id', 'desc')->get();
 
         return response()->json($order);
     }

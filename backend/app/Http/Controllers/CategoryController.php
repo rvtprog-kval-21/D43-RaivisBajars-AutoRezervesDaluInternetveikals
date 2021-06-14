@@ -14,7 +14,7 @@ class CategoryController extends Controller
 
         foreach ($category as $value) {
             $value->url=iconv('UTF-8', 'ASCII//TRANSLIT', preg_replace('/[^\p{L}\p{N}]/u', '-', $value->category_name));
-            $value->url = strtolower($value->url);
+            $value->url = mb_strtolower($value->url);
         }
         return $category;
     }

@@ -213,16 +213,16 @@ export default {
       categoryForm: {
         category_name: '',
         parent_category: '',
-        image: 'https://dummyimage.com/600x600/f5f5f5/000000.png&text=Placeholder'
+        image: 'https://dummyimage.com/600x600/151a21/fff.png&text=Placeholder'
       },
       product: {},
       productForm: {
         product_name: '',
-        product_image: 'https://dummyimage.com/600x600/f5f5f5/000000.png&text=Placeholder',
+        product_image: 'https://dummyimage.com/600x600/151a21/fff.png&text=Placeholder',
         brand_id: '',
         category_id: '',
         product_price: '',
-        quantity: '1'
+        quantity: '100'
       },
       categories: [],
       brands: []

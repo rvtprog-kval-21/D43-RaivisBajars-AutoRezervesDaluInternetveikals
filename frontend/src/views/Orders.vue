@@ -1,5 +1,9 @@
 <template>
 <div class="orders-content">
+  <div v-if="this.order.length == 0">
+      <h1 style="font-size: 23px; color: #dee3ea">Jūs neesat veicis nevienu pasūtījumu</h1>
+      <h2 style="font-size: 16px; color: #dee3ea">Spiediet <router-link :to="{ name: 'category' }">šeit</router-link> lai turpinātu iepirkties.</h2>
+    </div>
     <div class="orders-item-list">
       <div class="orders-item" v-for="(items, index) in order" :key="items.order_id">
         <div class="orders-item-content">
